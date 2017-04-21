@@ -80,6 +80,134 @@ if(isset($_SESSION['username'])){
                 left: 5
             });
         });
+	
+	<!-- MUST BE THE LAST SCRIPT IN <HEAD></HEAD></HEAD> png fix -->
+        <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $(document).pngFix( );
+        });
+        </script>
+    </head>
+    
+    <body> 
+    <!-- Start: page-top-outer -->
+    <div id="page-top-outer">    
+    
+    <!-- Start: page-top -->
+    <div id="page-top">
+    
+        <!-- start logo -->
+        <div id="logo">
+        <a href=""><img src="images/login/logo.png" width="300" height="40" alt="" /></a>
+        </div>
+        <!-- end logo -->
+        
+        <!--  start top-search -->
+        <div id="top-search">
+        </div>
+        <!--  end top-search -->
+        <div class="clear"></div>
+    
+    </div>
+    <!-- End: page-top -->
+    
+    </div>
+    <!-- End: page-top-outer -->
+        
+    <div class="clear">&nbsp;</div>
+     
+    <!--  start nav-outer-repeat................................................................................................. START -->
+    <div class="nav-outer-repeat"> 
+    <!--  start nav-outer -->
+    <div class="nav-outer"> 
+    
+            <!-- start nav-right -->
+            <div id="nav-right">
+            
+                <div class="nav-divider">&nbsp;</div>
+                <div class="showhide-account"><img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
+                <div class="nav-divider">&nbsp;</div>
+                <a href="logout.php" id="logout" onclick="return confirm('Apakah Anda yakin?')"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                <div class="clear">&nbsp;</div>
+            
+                <!--  start account-content -->	
+                <div class="account-content">
+                <div class="account-drop-inner">
+                    <a href="" id="acc-settings">Settings</a>
+                    <div class="clear">&nbsp;</div>
+                    <div class="acc-line">&nbsp;</div>
+                    <a href="" id="acc-inbox">Inbox</a>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                </div>
+                <!--  end account-content -->
+            
+            </div>
+            <!-- end nav-right -->
+    
+    
+            <!--  start nav -->
+            <div class="nav">
+            <div class="table">
+
+    		<?php 
+			$domain=$_SESSION['domain'];
+			
+			if($domain=='admin'){
+				include "menu-admin.php";
+			}
+			
+			if($domain=='guru'){
+				include "menu-guru.php";
+			}
+			
+			if($domain=='siswa'){
+				include "menu-siswa.php";
+			}
+			
+			?>
+
+            <div class="nav-divider">&nbsp;</div>
+    
+    
+            <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            </div>
+            <!--  start nav -->
+    
+    </div>
+    <div class="clear"></div>
+    <!--  start nav-outer -->
+    </div>
+    <!--  start nav-outer-repeat................................................... END -->
+    
+      <div class="clear"></div>
+     
+    <!-- start content-outer ........................................................................................................................START -->
+    <div id="content-outer">
+    <!-- start content -->
+    <div id="content">
+    
+    	<?php include "content.php"; ?>
+        
+        <div class="clear">&nbsp;</div>
+    
+    </div>
+    <!--  end content -->
+    <div class="clear">&nbsp;</div>
+    </div>
+    <!--  end content-outer........................................................END -->
+    
+    <div class="clear">&nbsp;</div>
+        
+   
+    </div>
+    <!-- end footer -->
+     
+    </body>
+    </html>
     
         
 
